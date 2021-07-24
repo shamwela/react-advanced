@@ -12,6 +12,7 @@ export default function Counter() {
       <input
         onChange={(event) => setName(event.currentTarget.value)}
         type='text'
+        placeholder='Name'
       />
       <div>
         {name} has clicked {count} times.
