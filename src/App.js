@@ -1,7 +1,17 @@
-import Users from './hooks/Users'
+import React, { Component } from 'react'
+import MoviePage from './context/MoviePage'
+import UserContext from './context/userContext'
 
-function App() {
-  return <Users />
+export default class App extends Component {
+  state = {
+    currentUser: { name: 'Sha' },
+  }
+
+  render() {
+    return (
+      <UserContext.Provider value={this.state.currentUser}>
+        <MoviePage />
+      </UserContext.Provider>
+    )
+  }
 }
-
-export default App
